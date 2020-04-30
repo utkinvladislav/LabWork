@@ -14,6 +14,7 @@ JButton button2 = new JButton("Вывести мнемосхему");
 JButton button3 = new JButton("Информация");
 JButton button4 = new JButton("Информация о GitHub");
 JLabel label = new JLabel("Кнопка информации добавлена");
+JLabel UtkinLabel = new JLabel("Уткин В., почта: mihut1@yandex.ru");
 public static JTextField lenghtField;
 public RRSU() {
 super("ЛАБА1 RRSU");
@@ -21,7 +22,9 @@ this.setBounds(100,100,600,500);
 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 Container container = this.getContentPane();
-container.setLayout(new GridLayout(4,3,2,2));
+
+container.setLayout(new GridLayout(5,3,2,2));
+
 
 button.addActionListener(new ButtonEventListener());
 container.add(button);
@@ -36,6 +39,8 @@ container.add(button2);
 container.add(button3);
 container.add(button4);
 container.add(label);
+container.add(UtkinLabel);
+
 
 String Path = "src/logo.jpg";
 Image img = null;
