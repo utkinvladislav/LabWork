@@ -16,6 +16,7 @@ JButton button4 = new JButton("Информация о GitHub");
 JLabel label = new JLabel("Кнопка информации добавлена");
 JLabel UtkinLabel = new JLabel("Уткин В., почта: mihut1@yandex.ru");
 public static JTextField lenghtField;
+public static JTextField edgarsField;
 public RRSU() {
 super("ЛАБА1 RRSU");
 this.setBounds(100,100,600,500);
@@ -31,6 +32,9 @@ container.add(button);
 lenghtField = new JTextField("Окно для вывода информации");
 lenghtField.setEditable(false);
 container.add(lenghtField);
+edgarsField = new JTextField("Почта Разяпова: jitnikov.p@yandex.ru");
+edgarsField.setEditable(false);
+container.add(edgarsField);
 button2.addActionListener(new ButtonEventListener2());
 button3.addActionListener(new ButtonEventListener3());
 button4.addActionListener(new ButtonEventListener4());
