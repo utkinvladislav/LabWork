@@ -1,4 +1,4 @@
-
+  
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.AffineTransformOp;
@@ -12,28 +12,51 @@ public class RRSU extends JFrame {
 private JButton button = new JButton("Вывести данные");
 JButton button2 = new JButton("Вывести мнемосхему");
 JButton button3 = new JButton("Информация");
+JButton button4 = new JButton("Информация о GitHub");
 JLabel label = new JLabel("Кнопка информации добавлена");
+<<<<<<< HEAD
 JLabel label1 = new JLabel("Смольников satyrdushekrad@yandex.ru");
+=======
+JLabel UtkinLabel = new JLabel("Уткин В., почта: mihut1@yandex.ru");
+>>>>>>> branch 'master' of https://github.com/utkinvladislav/LabWork
 public static JTextField lenghtField;
+public static JTextField edgarsField;
 public RRSU() {
 super("ЛАБА1 RRSU");
 this.setBounds(100,100,600,500);
 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 Container container = this.getContentPane();
+<<<<<<< HEAD
 container.setLayout(new GridLayout(5,3,2,2));
+=======
+
+container.setLayout(new GridLayout(5,3,2,2));
+
+>>>>>>> branch 'master' of https://github.com/utkinvladislav/LabWork
 
 button.addActionListener(new ButtonEventListener());
 container.add(button);
 lenghtField = new JTextField("Окно для вывода информации");
 lenghtField.setEditable(false);
 container.add(lenghtField);
+edgarsField = new JTextField("Почта Разяпова: jitnikov.p@yandex.ru");
+edgarsField.setEditable(false);
+container.add(edgarsField);
 button2.addActionListener(new ButtonEventListener2());
 button3.addActionListener(new ButtonEventListener3());
+button4.addActionListener(new ButtonEventListener4());
+
 container.add(button2);
 container.add(button3);
+container.add(button4);
 container.add(label);
+<<<<<<< HEAD
 container.add(label1);
+=======
+container.add(UtkinLabel);
+
+>>>>>>> branch 'master' of https://github.com/utkinvladislav/LabWork
 
 String Path = "src/logo.jpg";
 Image img = null;
@@ -54,6 +77,11 @@ container.add(picLabel);
 class ButtonEventListener3 implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		 RRSU.lenghtField.setText(RRSU2.getInfo());
+	}
+}
+class ButtonEventListener4 implements ActionListener {
+	public void actionPerformed(ActionEvent e) {
+		 RRSU.lenghtField.setText("Проект размещён в репозитории \n utkinvladislav/LabWork");
 	}
 }
 
