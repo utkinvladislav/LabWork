@@ -1,4 +1,4 @@
-
+  
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.AffineTransformOp;
@@ -12,6 +12,7 @@ public class RRSU extends JFrame {
 private JButton button = new JButton("Вывести данные");
 JButton button2 = new JButton("Вывести мнемосхему");
 JButton button3 = new JButton("Информация");
+JButton button4 = new JButton("Информация о GitHub");
 JLabel label = new JLabel("Кнопка информации добавлена");
 public static JTextField lenghtField;
 public RRSU() {
@@ -20,7 +21,7 @@ this.setBounds(100,100,600,500);
 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 Container container = this.getContentPane();
-container.setLayout(new GridLayout(3,3,2,2));
+container.setLayout(new GridLayout(4,3,2,2));
 
 button.addActionListener(new ButtonEventListener());
 container.add(button);
@@ -29,8 +30,11 @@ lenghtField.setEditable(false);
 container.add(lenghtField);
 button2.addActionListener(new ButtonEventListener2());
 button3.addActionListener(new ButtonEventListener3());
+button4.addActionListener(new ButtonEventListener4());
+
 container.add(button2);
 container.add(button3);
+container.add(button4);
 container.add(label);
 
 String Path = "src/logo.jpg";
@@ -52,6 +56,11 @@ container.add(picLabel);
 class ButtonEventListener3 implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		 RRSU.lenghtField.setText(RRSU2.getInfo());
+	}
+}
+class ButtonEventListener4 implements ActionListener {
+	public void actionPerformed(ActionEvent e) {
+		 RRSU.lenghtField.setText("Проект размещён в репозитории \n utkinvladislav/LabWork");
 	}
 }
 
