@@ -14,6 +14,7 @@ JButton button2 = new JButton("Вывести мнемосхему");
 JButton button3 = new JButton("Информация");
 JLabel label = new JLabel("Кнопка информации добавлена");
 public static JTextField lenghtField;
+public static JTextField edgarsField;
 public RRSU() {
 super("ЛАБА1 RRSU");
 this.setBounds(100,100,600,500);
@@ -27,6 +28,9 @@ container.add(button);
 lenghtField = new JTextField("Окно для вывода информации");
 lenghtField.setEditable(false);
 container.add(lenghtField);
+edgarsField = new JTextField("Почта Разяпова: jitnikov.p@yandex.ru");
+edgarsField.setEditable(false);
+container.add(edgarsField);
 button2.addActionListener(new ButtonEventListener2());
 button3.addActionListener(new ButtonEventListener3());
 container.add(button2);
