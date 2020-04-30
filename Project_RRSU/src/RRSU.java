@@ -14,11 +14,15 @@ JButton button2 = new JButton("Вывести мнемосхему");
 JButton button3 = new JButton("Информация");
 JButton button4 = new JButton("Информация о GitHub");
 JLabel label = new JLabel("Кнопка информации добавлена");
+<<<<<<< HEAD
 
 JLabel label1 = new JLabel("Смольников satyrdushekrad@yandex.ru");
 
 JLabel UtkinLabel = new JLabel("Уткин В., почта: mihut1@yandex.ru");
 
+=======
+JLabel ren = new JLabel("Рахматуллина Рената, johnnytheskull@yandex.ru");
+>>>>>>> refs/remotes/origin/RenyaBranch
 public static JTextField lenghtField;
 public static JTextField edgarsField;
 public RRSU() {
@@ -27,6 +31,7 @@ this.setBounds(100,100,600,500);
 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 Container container = this.getContentPane();
+<<<<<<< HEAD
 
 container.setLayout(new GridLayout(5,3,2,2));
 
@@ -34,6 +39,9 @@ container.setLayout(new GridLayout(5,3,2,2));
 container.setLayout(new GridLayout(5,3,2,2));
 
 
+=======
+container.setLayout(new GridLayout(4,3,2,2));
+>>>>>>> refs/remotes/origin/RenyaBranch
 
 button.addActionListener(new ButtonEventListener());
 container.add(button);
@@ -51,6 +59,7 @@ container.add(button2);
 container.add(button3);
 container.add(button4);
 container.add(label);
+container.add(ren);
 
 container.add(label1);
 
