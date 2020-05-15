@@ -52,5 +52,7 @@ class ButtonEventListener3 implements ActionListener {
 		,
 		"Группа ПИ-218",
 		JOptionPane.PLAIN_MESSAGE);
+		RRSU.lenghtField.setText("Результат вычисления: " + Double.toString(result));
 		}
+	
 	}

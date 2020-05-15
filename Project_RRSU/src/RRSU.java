@@ -36,7 +36,6 @@ Container container = this.getContentPane();
 
 container.setLayout(new GridLayout(7,3,2,2));
 
-
 button.addActionListener(new ButtonEventListener());
 container.add(button);
 lenghtField = new JTextField("Окно для вывода информации");
@@ -144,8 +143,9 @@ public void actionPerformed(ActionEvent e) {
 } 
 }
 class ButtonEventListener6 implements ActionListener {
-	public void actionPerformed(ActionEvent e) {
-		 RRSU.lenghtField.setText("");
-	}
+public void actionPerformed(ActionEvent e) {
+
+			 RRSU.lenghtField.setText("");
+} 
 }
 }
