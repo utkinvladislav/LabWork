@@ -35,6 +35,7 @@ Container container = this.getContentPane();
 
 container.setLayout(new GridLayout(7,3,2,2));
 
+
 button.addActionListener(new ButtonEventListener());
 container.add(button);
 lenghtField = new JTextField("Окно для вывода информации");
