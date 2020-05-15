@@ -14,34 +14,23 @@ JButton button2 = new JButton("Вывести мнемосхему");
 JButton button3 = new JButton("Информация");
 JButton button4 = new JButton("Информация о GitHub");
 JLabel label = new JLabel("Кнопка информации добавлена");
-<<<<<<< HEAD
 
 JLabel label1 = new JLabel("Смольников satyrdushekrad@yandex.ru");
 
 JLabel UtkinLabel = new JLabel("Уткин В., почта: mihut1@yandex.ru");
 
-=======
 JLabel ren = new JLabel("Рахматуллина Рената, johnnytheskull@yandex.ru");
->>>>>>> refs/remotes/origin/RenyaBranch
 public static JTextField lenghtField;
 public static JTextField edgarsField;
+public static JTextField ssilka;
 public RRSU() {
 super("ЛАБА1 RRSU");
 this.setBounds(100,100,600,500);
 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 Container container = this.getContentPane();
-<<<<<<< HEAD
 
-container.setLayout(new GridLayout(5,3,2,2));
-
-
-container.setLayout(new GridLayout(5,3,2,2));
-
-
-=======
-container.setLayout(new GridLayout(4,3,2,2));
->>>>>>> refs/remotes/origin/RenyaBranch
+container.setLayout(new GridLayout(6,3,2,2));
 
 button.addActionListener(new ButtonEventListener());
 container.add(button);
@@ -50,6 +39,8 @@ lenghtField.setEditable(false);
 container.add(lenghtField);
 edgarsField = new JTextField("Почта Разяпова: jitnikov.p@yandex.ru");
 edgarsField.setEditable(false);
+ssilka = new JTextField("https://ugatu.su/");
+ssilka.setEditable(false);
 container.add(edgarsField);
 button2.addActionListener(new ButtonEventListener2());
 button3.addActionListener(new ButtonEventListener3());
@@ -64,6 +55,7 @@ container.add(ren);
 container.add(label1);
 
 container.add(UtkinLabel);
+container.add(ssilka);
 
 
 
