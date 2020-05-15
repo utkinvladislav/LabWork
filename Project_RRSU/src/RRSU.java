@@ -4,6 +4,8 @@ import java.awt.event.*;
 import java.awt.image.AffineTransformOp;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Scanner;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -13,10 +15,17 @@ private JButton button = new JButton("Вывести данные");
 JButton button2 = new JButton("Вывести мнемосхему");
 JButton button3 = new JButton("Информация");
 JButton button4 = new JButton("Информация о GitHub");
+JButton button5 = new JButton("Загрузить текст");
 JLabel label = new JLabel("Кнопка информации добавлена");
+
+JLabel label1 = new JLabel("Смольников satyrdushekrad@yandex.ru");
+
 JLabel UtkinLabel = new JLabel("Уткин В., почта: mihut1@yandex.ru");
+
+JLabel ren = new JLabel("Рахматуллина Рената, johnnytheskull@yandex.ru");
 public static JTextField lenghtField;
 public static JTextField edgarsField;
+public static JTextField ssilka;
 public RRSU() {
 super("ЛАБА1 RRSU");
 this.setBounds(100,100,600,500);
@@ -24,8 +33,7 @@ this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 Container container = this.getContentPane();
 
-container.setLayout(new GridLayout(5,3,2,2));
-
+container.setLayout(new GridLayout(7,3,2,2));
 
 button.addActionListener(new ButtonEventListener());
 container.add(button);
@@ -34,16 +42,26 @@ lenghtField.setEditable(false);
 container.add(lenghtField);
 edgarsField = new JTextField("Почта Разяпова: jitnikov.p@yandex.ru");
 edgarsField.setEditable(false);
+ssilka = new JTextField("https://ugatu.su/");
+ssilka.setEditable(false);
 container.add(edgarsField);
 button2.addActionListener(new ButtonEventListener2());
 button3.addActionListener(new ButtonEventListener3());
 button4.addActionListener(new ButtonEventListener4());
+button5.addActionListener(new ButtonEventListener5());
 
 container.add(button2);
 container.add(button3);
 container.add(button4);
+container.add(button5);
 container.add(label);
+container.add(ren);
+
+container.add(label1);
+
 container.add(UtkinLabel);
+container.add(ssilka);
+
 
 
 String Path = "src/logo.jpg";
@@ -109,5 +127,16 @@ lenghtWin.setVisible(true);
 public static void main(String[] args) {
 RRSU app = new RRSU();
 app.setVisible(true);
+}
+class ButtonEventListener5 implements ActionListener {
+public void actionPerformed(ActionEvent e) {
+	String text;  
+	InputStream usersStream = getClass()
+			.getClassLoader().getResourceAsStream("sample.txt");
+		Scanner usersScan = new Scanner(usersStream);
+			text = usersScan.nextLine();;
+			usersScan.close();
+			 RRSU.lenghtField.setText(text);
+} 
 }
 }
