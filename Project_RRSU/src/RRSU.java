@@ -17,6 +17,7 @@ JButton button3 = new JButton("Информация");
 JButton button4 = new JButton("Информация о GitHub");
 JButton button5 = new JButton("Загрузить текст");
 JButton button6 = new JButton("Удалить текст");
+JButton button7 = new JButton("Показать логотип");
 JLabel label = new JLabel("Кнопка информации добавлена");
 
 JLabel label1 = new JLabel("Смольников satyrdushekrad@yandex.ru");
@@ -34,7 +35,7 @@ this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 Container container = this.getContentPane();
 
-container.setLayout(new GridLayout(7,3,2,2));
+container.setLayout(new GridLayout(6,3,2,2));
 
 button.addActionListener(new ButtonEventListener());
 container.add(button);
@@ -51,12 +52,14 @@ button3.addActionListener(new ButtonEventListener3());
 button4.addActionListener(new ButtonEventListener4());
 button5.addActionListener(new ButtonEventListener5());
 button6.addActionListener(new ButtonEventListener6());
+button7.addActionListener(new ButtonEventListener7());
 
 container.add(button2);
 container.add(button3);
 container.add(button4);
 container.add(button5);
 container.add(button6);
+container.add(button7);
 container.add(label);
 container.add(ren);
 
@@ -147,5 +150,28 @@ public void actionPerformed(ActionEvent e) {
 
 			 RRSU.lenghtField.setText("");
 } 
+}
+class ButtonEventListener7 implements ActionListener {
+public void actionPerformed(ActionEvent e) {
+
+	String Path = "src/logo.jpg";
+	Image img = null;
+	File f;
+	f = new File(Path);
+	try {
+	img = ImageIO.read(f);
+	} catch(IOException ioe) {
+	JOptionPane.showConfirmDialog(null, "Что-то неправильно!\n" + ioe.toString(),
+	"Error!", JOptionPane.PLAIN_MESSAGE);
+	System.exit(0);
+	}
+	Image scaledImg = img.getScaledInstance(750, 750, AffineTransformOp.TYPE_BILINEAR);
+	JLabel picLabel = new JLabel(new ImageIcon(scaledImg));
+	JFrame win = new JFrame();
+	win.add(picLabel);
+	win.setBounds(200,200,800,800);
+	win.setVisible(true);
+	
+}
 }
 }
