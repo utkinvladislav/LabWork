@@ -16,6 +16,7 @@ JButton button2 = new JButton("Вывести мнемосхему");
 JButton button3 = new JButton("Информация");
 JButton button4 = new JButton("Информация о GitHub");
 JButton button5 = new JButton("Загрузить текст");
+JButton button6 = new JButton("Удалить текст");
 JLabel label = new JLabel("Кнопка информации добавлена");
 
 JLabel label1 = new JLabel("Смольников satyrdushekrad@yandex.ru");
@@ -50,11 +51,13 @@ button2.addActionListener(new ButtonEventListener2());
 button3.addActionListener(new ButtonEventListener3());
 button4.addActionListener(new ButtonEventListener4());
 button5.addActionListener(new ButtonEventListener5());
+button6.addActionListener(new ButtonEventListener6());
 
 container.add(button2);
 container.add(button3);
 container.add(button4);
 container.add(button5);
+container.add(button6);
 container.add(label);
 container.add(ren);
 
@@ -139,5 +142,10 @@ public void actionPerformed(ActionEvent e) {
 			usersScan.close();
 			 RRSU.lenghtField.setText(text);
 } 
+}
+class ButtonEventListener6 implements ActionListener {
+	public void actionPerformed(ActionEvent e) {
+		 RRSU.lenghtField.setText("");
+	}
 }
 }
